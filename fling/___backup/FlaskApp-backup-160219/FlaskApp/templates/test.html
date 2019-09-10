@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!-- Jumbatron -->
+<div class="jumbotron jumbotron-fluid"><!--style="color:#1cabe6;" -->
+  <h1>Hello, Ma Niggas!</h1>
+  <p>If you're reading this it is pretty clear from your actions that you're a fool.
+    And you're even a greater fool if you're still reading. So STOP reading!
+  And if still you're reading then I can't help your mental illnes.</p>
+  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+</div>
+
+<!-- Injecting Python Data -->
+<ul style="color:#fff;">
+Test<br><br>
+{% for d in DEST_DICT["Destinations"] %}
+    <li>{{d[0]}}, {{d[1]}}</li>
+{% endfor %}
+</ul>
+
+{% endblock content %}

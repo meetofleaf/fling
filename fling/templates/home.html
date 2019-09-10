@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!-- CAROUSEL -->
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+
+    <div class="item active">
+      <img src=" {{ url_for('static', filename='images/flight2.jpg')}} " alt="Ultimate Design">
+      <div class="carousel-caption">
+    	<h3>Luxuries Beyond Limits</h3>
+    		<p>Business Class facilities in the basic package.</p>
+  		</div>
+    </div>
+
+    <div class="item">
+      <img src=" {{ url_for('static', filename='images/flight4.jpg')}} " alt="Luxuries">
+        <div class="carousel-caption">
+		    <h3>Safety Assured</h3>
+		    <p>Safety by god himeslf. Lowest chances of failures due to our onboard & offboard security and plane maintainance.</p>
+  		</div>
+    </div>
+
+    <div class="item">
+      <img src=" {{ url_for('static', filename='images/flight5.jpg')}} " alt="Ulimately Fast & Efficient">
+      <div class="carousel-caption">
+    	<h3>Bleeding Edge Technology</h3>
+    	<p>Lightning Fast Planes And Silent Like an Owl. Reach on time whatever the place & time.</p>
+  	  </div>
+    </div>
+
+  </div>
+
+    <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<br>
+<div class="jumbotron">
+  <h1>FLING</h1>
+  <h2>Don't Just Fly, Teleport</h2><br><br>
+  <p>Now available in leading countries, check for us in your state.<br>
+  	Fly without any delays, with worldclass luxury and in futuristic planes; to help you reach your destination safe and sound, hassle-free.
+  	</p>
+  <p><a class="btn btn-primary btn-lg" href="/book" role="button">Book Now</a></p>
+</div>
+
+
+{% endblock content %}

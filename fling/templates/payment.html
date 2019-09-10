@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class = 'container px-lg-5'>
+
+<h3 style="color:#eee;"> Checkout </h3>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Fill in the Details as per the Crypto-Card</h3>
+  </div>
+  <div class="panel-body">
+
+        {% from "_formhelpers.html" import render_field %}
+        
+        <form method=POST action="/payment">
+        
+            <dl>
+            
+                <div class="form-group">
+                
+                <label>Full Name:</label>
+                {{ form.fullname(class_="form-control") }}
+                
+                <label>Crypto-Card No.</label>
+                {{ form.card(class_="form-control") }}
+                
+                <label>CVV</label>
+                {{ form.cvv(class_="form-control") }}
+                
+                <label>Expiry Date</label>
+                {{ form.expdate(class_="form-control") }}
+                
+                </div>            
+            
+            </dl>
+            
+            <p style="color:#333;"><button type="submit" class="btn btn-primary">Submit</button></p>
+        </form>
+        
+        {% if error %}
+            <p class="error"> <strong>Error:</strong>{{ error }} </p>
+        {% endif %}
+
+    </div>
+</div>
+    
+</div>
+
+{% endblock content %}

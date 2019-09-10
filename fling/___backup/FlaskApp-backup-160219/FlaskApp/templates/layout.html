@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+
+    <meta charset="utf-8">
+    <title>FLING</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+</head>
+
+
+<!-- H E A D E R -->
+<header>
+
+<!-- LOGO NAVBAR -->
+<nav style="height:75px; border-color:#222; z-index:2;" class="navbar navbar-inverse">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="/">
+        <img style="width:70px; margin-left:-3px;margin-top:-5px;" alt="Brand" src="{{ url_for('static', filename='images/brand.png')}}">
+    </a>
+
+  </div><!-- fluid -->
+</nav>
+<!-- /NAVBAR -->
+
+<!-- SECOND NAVBAR -->
+  <nav style="margin-top:-25px; border-color:#222;" class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and toggle (Component Stuff) -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a style="color:#1cabe6; font-size:25px;" class="navbar-brand" href="/">FLING</a>
+      </div>
+
+      <!-- nav links -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="inactive"><a href="/flights">Flights <span class="sr-only">(current)</span></a></li>
+          <li class="inactive"><a href="/about">About <span class="sr-only">(current)</span></a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div><!-- /navbar-collapse -->
+    </div><!-- /container-fluid -->
+</nav>
+<!-- /SECIND NAVBAR -->
+
+</header>
+
+
+<!-- B O D Y -->
+<body style="background: url({{ url_for('static', filename='images/bflight4.jpg')}}) no-repeat center center fixed; background-size: cover;">
+<div class="container-fluid" style="min-height:100%; width:85%;">
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+{% block content %}
+{% endblock %}
+
+</div>
+</body>
+
+
+</html>

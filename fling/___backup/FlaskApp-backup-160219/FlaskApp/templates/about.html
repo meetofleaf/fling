@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<style> .round{border-radius:5px;} </style>
+
+<div class="page-header">
+  <h1 style="color:#fff;">About us </h1>
+</div>
+
+
+<div align="center" class="alert alert-info" role="alert"><h4>We deliver one of the best & most unique flight services in the world. One that you'll never see in your life.</h4>
+    <button type="button" class="btn btn-primary">Gallery</button>
+</div>
+
+<div class="row">
+
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="{{ url_for('static', filename='images/modular2.png') }}" alt="Best Flight Service">
+      <div class="caption">
+        <h3>Custom Packages</h3>
+        <p>We provide modularity, which allows you to plan your flight package and only pay for what you plan to use. Choose from multiple options for food, accessories and features.
+We also accept special requests from senior citizens regarding any issue.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-9 col-md-4">
+    <div class="thumbnail">
+      <img src="{{ url_for('static', filename='images/ent.png') }}" alt="Best Flight Service">
+      <div class="caption">
+        <h3>Entertainment</h3>
+        <p>Kill boredom with in-built seat radio, watch premium movies stored offlline on the back-seat screen and millions of tracks from around the world stored offline.
+Do all this from the comfort of your seat which inludes 3.5mm Aux jack & USB port.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-9 col-md-4">
+    <div class="thumbnail">
+      <img src="{{ url_for('static', filename='images/firstaid2.png') }}" alt="Best Flight Service">
+      <div class="caption">
+        <h3>Medical Assistance</h3>
+        <p>Getting sick? Got hurt? Not feeling well? We got medical assistance for the entire duration of flight.</p><br><br><br>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  
+  
+<div class="row">
+
+  <div class="col-sm-9 col-md-4">
+    <div class="thumbnail">
+      <img class="round" src="{{ url_for('static', filename='images/flight3.png') }}" alt="Best Flight Service">
+      <div class="caption">
+        <h3>Equity</h3>
+        <p>There are no business or first classes, all are the seats are the same and nothing less than first class, so there won't be any differences among our customers.</p><br><br><br><br><br>
+      </div>
+    </div>
+  </div>
+
+    <div class="col-sm-9 col-md-4">
+    <div class="thumbnail">
+      <img class="round" src="{{ url_for('static', filename='images/flight2.jpg') }}" alt="Best Flight Service">
+      <div class="caption">
+        <h3>Godlike Planes</h3>
+        <p>The plane you'll travel in are some of the most powerful and aerodynamic planes ever built. The body is made with <b>Aerospace Grade Aluminium & Titanium</b>, materials which are used in making space shuttles, reason why they can withstand an emergency landing on ground.<br>And it's bleeding edge design cuts through air like a Diamond Blade giving you quiet & smooth flying experience.</p>
+      </div>
+    </div>
+  </div>
+  
+    <div class="col-sm-9 col-md-4">
+    <div class="thumbnail">
+      <img class="round" src="{{ url_for('static', filename='images/flight5.jpg') }}" alt="Best Flight Service">
+      <div class="caption">
+        <h3>Lightening Speed</h3>
+        <p>The jet engines utilize hydrogen fuel-cells used in rockets, reaching the speed of around 1200KMpH, almost <b>Mach 1.</b><br>
+        This allows us to reach your destinations twicw as fast as commercial airplanes.</p><br><br><br><br>
+      </div>
+    </div>
+  </div>
+  
+  </div>
+
+
+{% endblock content %}

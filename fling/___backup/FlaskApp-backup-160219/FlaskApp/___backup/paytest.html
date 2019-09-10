@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div style="color:#eee;" class = 'container'>
+
+<h4> Seat Registration </h4> <br>
+
+    {% from "_formhelpers.html" import render_field %}
+    
+    <form method=POST action="/success">
+    
+        <dl>
+        
+            {{ render_field(form.fname) }}
+            {{ render_field(form.card) }}
+            {{ render_field(form.cvv) }}
+            {{ render_field(form.xd) }}
+            
+        </dl>
+        <p style="color:#333;"><input type="submit" value="Pay"></p>
+    </form>
+    
+    {% if error %}
+        <p class="error"> <strong>Error:</strong>{{ error }} </p>
+    {% endif %}
+    
+</div>
+
+{% endblock content %}

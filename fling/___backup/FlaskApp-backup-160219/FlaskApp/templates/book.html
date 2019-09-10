@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class = 'container px-lg-5'>
+
+<h3 style="color:#eee;"> Seat Registration </h3>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Fill in the Details</h3>
+  </div>
+  <div class="panel-body">
+
+    {% from "_formhelpers.html" import render_field %}
+    
+        <form method=POST action="book">
+        
+            <dl>
+            
+                {{ render_field(form.source) }}<br>
+                {{ render_field(form.destination) }}<br>
+                {{ render_field(form.quantity) }}
+
+            </dl>
+            <p style="color:#333;"><button type="submit" class="btn btn-primary">Submit</button></p>
+        </form>
+        
+        {% if error %}
+            <p class="error"> <strong>Error:</strong>{{ error }} </p>
+        {% endif %}
+
+    </div>
+</div>
+   
+</div>
+        
+{% endblock content %}

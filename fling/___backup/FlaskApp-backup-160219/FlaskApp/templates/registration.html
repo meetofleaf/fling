@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class = 'container px-lg-5'>
+
+<h3 style="color:#eee;"> Customer Registration </h3>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Fill in the Details</h3>
+  </div>
+  <div class="panel-body">
+
+    {% from "_formhelpers.html" import render_field %}
+    
+        <form method=POST action="/registration">
+        
+            <dl>
+                <div class="form-group">
+                    <label>First Name:</label>
+                    {{ form.fname(class_="form-control") }}
+                    
+                    <label>Last Name:</label>
+                    {{ form.lname(class_="form-control") }}
+                    
+                    <label>Email ID:</label>
+                    {{ form.email(class_="form-control") }}
+                    
+                    <label>Mobile No.:</label>
+                    {{ form.mob(class_="form-control") }}
+                    
+                    <label>Date Of Birth:</label>
+                    {{ form.dob(class_="form-control") }}
+                    
+                    <label>Special Requests:</label>
+                    {{ form.sp_req(class_="form-control") }}
+                </div>
+            </dl>
+            <p style="color:#333;"><button type="submit" class="btn btn-primary">Submit</button></p>
+        </form>
+        
+        {% if error %}
+            <p class="error"> <strong>Error:</strong>{{ error }} </p>
+        {% endif %}
+
+    </div>
+</div>
+   
+</div>
+
+{% endblock content %}
