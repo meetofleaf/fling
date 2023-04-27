@@ -23,15 +23,7 @@ git clone https://github.com/meetofleaf/fling.git
 - Python3
 - Flask
 
-3. Set up the database:
-
-```
-python manage.py db init
-python manage.py db migrate
-python manage.py db upgrade
-```
-
-4. Start the application:
+3. Start the application:
 
 ```
 python init.py
